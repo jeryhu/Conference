@@ -36,7 +36,7 @@ namespace Conference.MessageBroker
         {
             try
             {
-                _broker.Start();
+			_broker.Start();//启动Equeue中间件
             }
             catch (Exception ex)
             {
@@ -82,7 +82,7 @@ namespace Conference.MessageBroker
                 ConsumerAddress = new IPEndPoint(SocketUtils.GetLocalIPV4(), ConfigSettings.BrokerConsumerPort),
                 AdminAddress = new IPEndPoint(SocketUtils.GetLocalIPV4(), ConfigSettings.BrokerAdminPort)
             };
-            _broker = BrokerController.Create(setting);
+            _broker = BrokerController.Create(setting); //通过配置创建 Equeue中间件 完成EQueue相关初始化工作
             _logger.Info("EQueue initialized.");
         }
     }

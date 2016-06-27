@@ -21,5 +21,5 @@ A conference example to explain how to use enode to develop ddd+cqrs+event sourc
 4）Registration.ProcessorHost  
 5）ConferenceManagement.Web  
 6）Registration.Web  
-
+其中2，3，4对应了划分的三个BC （ConferenceManagement,Payments,Registration）
 OK，到这里，整个案例运行就完成了。  
